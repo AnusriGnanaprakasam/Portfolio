@@ -1,34 +1,74 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import arizonaSchoolLogo from './images/arizona-school-of-music-logo.png';
+import workBasedLearningLogo from './images/work-based-learning-alliance-logo.png';
+import cupbopLogo from './images/cupbop-logo.png';
+import Anusri from './images/Anusri.jpeg';
 
-function MyButton() {
-  return (
-    <button>
-      I'm a button
-    </button>
-  );
-}
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-          <div>
-      <h1>Welcome to my app</h1>
-      <MyButton />
-    </div>
-        </a>
+      <header>
+        <h1>Anusri Gnanaprakasam</h1>
+        <img src={Anusri} alt="Anusri Gnanaprakasam" className="profile-image" />
+        <p>Freshman @ Barrett ASU studying Computer Science (Cybersecurity)</p>
+        <nav>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/anusri-gnanaprakasam-330a21284/">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/coloredpencilart_person/">Instagram</a></li>
+            <li><a href="mailto:agnanapr@asu.edu">Contact</a></li>
+          </ul>
+        </nav>
       </header>
+      <main>
+        <section id="about">
+          <h2>About Me</h2>
+          <p>
+            Hi! I'm Anusri Gnanaprakasam, a Computer Science major specializing in cybersecurity. Alongside my studies, I teach violin, sharing my love for music with others. In my free time, I love diving into Capture The Flag (CTF) competitions, exploring the thrill of problem-solving and cybersecurity challenges. I also love drawing in my spare time! You should check out my instagram page.
+          </p>
+        </section>
+        <section id="experience">
+          <h2>Experience</h2>
+          <ul className="experience-list">
+            <li>
+              <img src={arizonaSchoolLogo} alt="Arizona School of Music Logo" className="company-logo" />
+              <div>
+                <strong>Private Lessons Teacher</strong> at Arizona School of Music (Sep 2023 - Present)
+                <p>Scottsdale, Arizona, United States · On-site</p>
+              </div>
+            </li>
+            <li>
+              <img src={workBasedLearningLogo} alt="Work-Based Learning Alliance Logo" className="company-logo" />
+              <div>
+                <strong>Project Lead Intern</strong> at Work-Based Learning Alliance (Jul 2024)
+                <p>
+                  As a high school student passionate about my professional development, I completed a virtual internship with the Work-Based Learning Alliance. I worked in a team to complete a project for the Colorado Plateau Center for Health Professions, gaining valuable experience in AI tools and teamwork.
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src={cupbopLogo} alt="Cupbop Logo" className="company-logo" />
+              <div>
+                <strong>Crew Member</strong> at Cupbop (Feb 2024 - Jul 2024)
+                <p>Phoenix, Arizona, United States · On-site</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section id="education">
+          <h2>Education</h2>
+          <ul>
+            <li><strong> Ongoing Computer Science degree at Arizona State University</strong> </li>
+          </ul>
+        </section>
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:agnanapr@asu.edu">agnanapr@asu.edu</a></p>
+        </section>
+      </main>
+      <footer>
+        <p>© 2023 Anusri Gnanaprakasam</p>
+      </footer>
     </div>
   );
 }
