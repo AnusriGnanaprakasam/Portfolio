@@ -6,7 +6,7 @@ import cupbopLogo from './images/cupbop-logo.jpeg';
 import Anusri from './images/Anusri.jpeg';
 import fseImage1 from './images/fse.png';
 
-
+// yerrrrrrrrrrrrrrrrrrrrrrrr
 function App() {
   const [visibleSection, setVisibleSection] = useState('about');
 
