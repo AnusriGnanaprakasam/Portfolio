@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-import arizonaSchoolLogo from './images/arizona-school-of-music-logo.png';
-import workBasedLearningLogo from './images/work-based-learning-alliance-logo.png';
-import cupbopLogo from './images/cupbop-logo.png';
+import arizonaSchoolLogo from './images/kirks_studio_for_the_performing_arts_logo.jpeg';
+import workBasedLearningLogo from './images/work-based-learning-alliance-logo.jpeg';
+import cupbopLogo from './images/cupbop-logo.jpeg';
 import Anusri from './images/Anusri.jpeg';
 
 function App() {
@@ -25,7 +25,9 @@ function App() {
             <ul>
               <li><a href="https://www.linkedin.com/in/anusri-gnanaprakasam-330a21284/">LinkedIn</a></li>
               <li><a href="https://www.instagram.com/coloredpencilart_person/">Instagram</a></li>
+              <li><a href="https://github.com/AnusriGnanaprakasam">Github</a></li>
               <li><a href="mailto:agnanapr@asu.edu">Contact</a></li>
+
               <li><button onClick={() => handleSectionChange('experience')}>Experience</button></li>
               <li><button onClick={() => handleSectionChange('education')}>Education</button></li>
             </ul>
@@ -37,8 +39,15 @@ function App() {
           <section id="about">
             <h2>About Me</h2>
             <p>
-              Hi! I'm Anusri Gnanaprakasam, a Computer Science major specializing in cybersecurity. Alongside my studies, I teach violin, sharing my love for music with others. In my free time, I love diving into Capture The Flag (CTF) competitions, exploring the thrill of problem-solving and cybersecurity challenges. I also love drawing in my spare time! You should check out my instagram page.
-            </p>
+              &emsp;&emsp;Hi! My name is Anusri Gnanaprakasam, and I am a Computer Science major and Grand Challenges Scholar pursuing a degree at Arizona State University.
+              I can be found in clubs and organizations on campus including the Next Generation Service Core, EPICS, and WiCs. 
+              I am currently interested in exploring topics related to data privacy, data engineering, AI and digital forensics.
+              I have learned a few programming languages such as Java, C++, C and Python alongside Cloud technologies within
+              AWS and GCP. In my free time, I enjoy activities such as playing violin and drawing. My theme interest within
+              the Grand Challenges Scholars Program is Security. I was introduced to this field of study by particpating in 
+              Cybersecurity Bootcamps hosted by AZCyber, a nonprofit organization. This website documents my journey becoming a certified Grand
+              Challenges Scholar.
+           </p>
           </section>
         )}
         {visibleSection === 'experience' && (
