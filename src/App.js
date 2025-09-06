@@ -4,6 +4,8 @@ import arizonaSchoolLogo from './images/kirks_studio_for_the_performing_arts_log
 import workBasedLearningLogo from './images/work-based-learning-alliance-logo.jpeg';
 import cupbopLogo from './images/cupbop-logo.jpeg';
 import Anusri from './images/Anusri.jpeg';
+import fseImage1 from './images/fse.png';
+
 
 function App() {
   const [visibleSection, setVisibleSection] = useState('about');
@@ -30,6 +32,18 @@ function App() {
 
               <li><button onClick={() => handleSectionChange('experience')}>Experience</button></li>
               <li><button onClick={() => handleSectionChange('education')}>Education</button></li>
+              <li>
+              <a
+                href="#reflection"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSectionChange('reflection');
+                }}
+              >
+                FSE150 Reflection
+              </a>
+            </li>
+
             </ul>
           </nav>
         </div>
@@ -93,6 +107,68 @@ function App() {
             <h2>Contact</h2>
             <p>Email: <a href="mailto:agnanapr@asu.edu">agnanapr@asu.edu</a></p>
           </section>
+        )}
+
+        {visibleSection === 'reflection' && (
+        <section id="reflection">
+          <h2>FSE150 Course Reflection</h2>
+          <p>
+            When I first joined GCSP over the summer, I was not sure of what to expect from the
+program. All I knew was that there were alot of research faculty within GCSP and that it
+would help you make connections with motivated students. The first week was spent
+talking about how GCSP can help contribute to your college experience and the major
+grand challenges that exist in society. One of the challenges, securing cyberspace, is what
+I would like to focus on in my career. In the next few weeks, two other projects were also
+introduced in the class: The GCSP Theme Project and the Future Solutions project. These
+projects seemed daunting and did take alot of effort, however, I liked how the Future
+Solutions project was grouped into deliverables. I decided to choose the theme Security
+for my GCSP Theme projects and chose articles about Phishing, Artificial Intelligence and
+VPNs. All of these topics are relevant to keeping the internet architecture of society
+secured. After discussing these topics, the course moved onto discussing the four major
+theme areas: Health, Sustainability, Joy of Living and Security.
+The first of these theme areas to be discussed was health. When talking about health, the
+environment also seemed to play a major role. One of the activities involved watching a
+video on the dangers of indoor air pollution. When thinking about pollution, my first
+thought is the pollution that is faced outdoors. I did not know that indoor pollution was a
+prevalent problem in underdeveloped nations. The health debate in class was also
+interesting because of how passionate people were about different positions. My team was
+assigned to prosthetics and essentially had to argue against technological development,
+which was definitely difficult to do in a university that values innovation.
+The next theme area discussed was sustainability. The major topic I learned about related
+to sustainability was life cycle analysis, which is used to measure the environmental
+impact of a technology. Everything from sourcing the material to repurposing the material
+has been taken into consideration. I also found the science fiction prototyping activity
+interesting and learned that science fiction reflects the human desire to bring about new
+advancements. The guest lecture by Dr. Deniz Karakoc was especially interesting because
+of how she used data science to show how agriculture is being sourced and transported. I
+was surprised that there is not more data about the amount of food actually being used. I
+also met with some GCSP faculty during the GCSP faculty dinner this semester. One
+faculty member I found particularly interesting was Rakibul Hasan because of his ongoing
+research about data privacy and the various interesting ways data is being abused. One of
+the most shocking was data being used to identify potential disabilities to insurance
+companies.
+During the security theme area, there were discussions on how security can be thought of
+in various ways. The GCSP program thinks about security in the sense of scope it covers.
+There is also physical security versus cybersecurity. I liked the guest lecture that Dr.
+Chenkai Wang presented that went into cryptography and zero knowledge proofs. I have
+thought that it was interesting how zero knowledge proofs just verified that a user knows
+the password rather than the password itself. The concept is hard to wrap one’s mind
+around, but is very interesting. I may want to look more into this topic in the future and
+possibly do research related to it.
+The last theme area that was discussed is Joy of Living, as a person who has had alot of
+mental health struggles, I think that this area is something that society in general needs to
+focus more on. More people than ever are feeling isolated and stressed because of the
+pressures of society. I found it interesting how technological development can contribute
+to making people feel happier. Overall, I have learned alot about each of these theme
+areas and how to manage projects this semester in the GCSP program.
+          </p>
+          <p>Below is my Future Solutions Project:</p>
+          <div>
+            <img src={fseImage1} alt="Future Solutions" style={{maxWidth: '100%', marginBottom: '15px'}} />
+          </div>
+          <p>
+          </p>
+        </section>
         )}
       </main>
       <footer>
