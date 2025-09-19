@@ -6,7 +6,7 @@ import cupbopLogo from './images/cupbop-logo.jpeg';
 import Anusri from './images/Anusri.jpeg';
 import fseImage1 from './images/fse.png';
 
-// yerrrrrrrrrrrrrrrrrrrrrrrr
+
 function App() {
   const [visibleSection, setVisibleSection] = useState('about');
 
@@ -22,11 +22,11 @@ function App() {
         </div>
         <div className="about-container">
           <h1>Anusri Gnanaprakasam</h1>
-          <p>Freshman @ Barrett ASU studying Computer Science (Cybersecurity)</p>
+          <p>Sophomore @ Barrett ASU studying Computer Science (Cybersecurity)</p>
           <nav>
             <ul>
               <li><a href="https://www.linkedin.com/in/anusri-gnanaprakasam-330a21284/">LinkedIn</a></li>
-              <li><a href="https://www.instagram.com/coloredpencilart_person/">Instagram</a></li>
+              
               <li><a href="https://github.com/AnusriGnanaprakasam">Github</a></li>
               <li><a href="mailto:agnanapr@asu.edu">Contact</a></li>
 
@@ -42,8 +42,18 @@ function App() {
               >
                 FSE150 Reflection
               </a>
-            </li>
-
+              </li>
+              <li>
+              <a
+                href="#servicelearning"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSectionChange('Service Learning');
+                }}
+              >
+                Service Learning
+              </a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -60,7 +70,7 @@ function App() {
               AWS and GCP. In my free time, I enjoy activities such as playing violin and drawing. My theme interest within
               the Grand Challenges Scholars Program is Security. I was introduced to this field of study by particpating in 
               Cybersecurity Bootcamps hosted by AZCyber, a nonprofit organization. This website documents my journey becoming a certified Grand
-              Challenges Scholar.
+              Challenges Scholar. In the future, I hope to do work around forensics or network security.
            </p>
           </section>
         )}
@@ -129,6 +139,13 @@ function App() {
           <p>
           </p>
         </section>
+        )}
+        {visibleSection === 'Service Learning' && (
+          <section id="Service Learning">
+            <h2>Service Learning</h2>
+            <p>&emsp;&emsp;For my service learning, I am planning on completing FSE 104 and 404 while participating in the Engineering Projects in Community Service(EPICS) organization. So far, I have completed one semester in this program, and I am in the process of completing another semester through FSE 404. At the start of EPICS, I was not sure of what I could expect to accomplish through the program. I heard about how the program can be useful in getting experience for engineers of all majors, but I was unsure of what projects I would be able to participate in. I took note of what skills I would like to learn during my time at EPICS while I was waiting to see what project I was placed in. Later, I was placed on Aqua Guard, which was one of my first choices because it involved learning about IoT development, putting together hardware and software knowledge to create a complete water quality monitoring device. During my time that semester, I learned more about hardware and cloud technology. Since my GCSP theme is Security, having an understanding of these topics could help me design secure systems that involve these pieces. The device will ultimately be deployed to shrimp farms in India so that farmers can have a more consistent way of testing the quality of water in vast ponds. So far, the device has been able to pump water for testing and can connect to Google Cloud Services. I am hoping to continue with the rapid development of this project with my team. 
+</p>
+          </section>
         )}
       </main>
       <footer>
